@@ -1,1 +1,1 @@
-web gunicorn windApp IBM:app
+web gunicorn app:app
