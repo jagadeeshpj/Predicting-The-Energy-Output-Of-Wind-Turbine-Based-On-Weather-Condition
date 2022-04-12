@@ -28,7 +28,7 @@ def windapi():
     temp = str((resp["main"]["temp"])-273.15) +" °C"
     humid = str(resp["main"]["humidity"])+" %"
     pressure = str(resp["main"]["pressure"])+" mmHG"
-    speed = str(resp["wind"]["speed"])+" m/s"
+    speed = str((resp["wind"]["speed"])*3.6)+" Km/s"
     return render_template('predict.html', temp=temp, humid=humid, pressure=pressure,speed=speed)   
 @app.route('/y_predict',methods=['POST'])
 def y_predict():
